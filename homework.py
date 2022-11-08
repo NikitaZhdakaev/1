@@ -23,36 +23,54 @@
 # full = 100
 # request_user(full)
 
-задача 2
-with open('text_words.txt', 'w', encoding='UTF-8') as file:
-    file.write(input('Напишите текст необходимый для сжатия: '))
-with open('text_words.txt', 'r') as file:
-    my_txt = file.readline()
-    txt_compr = my_txt.split()
+# задача 2
+# with open('text_words.txt', 'w', encoding='UTF-8') as file:
+#     file.write(input('Напишите текст необходимый для сжатия: '))
+# with open('text_words.txt', 'r') as file:
+#     my_txt = file.readline()
+#     txt_compr = my_txt.split()
 
-print(my_txt)
+# print(my_txt)
 
-def file_encod(txt):
-    encond = ''
-    prev_char = ''
-    count = 1
-    if not txt:
-        return ''
+# def file_encod(txt):
+#     encond = ''
+#     prev_char = ''
+#     count = 1
+#     if not txt:
+#         return ''
 
-    for char in txt:
-        if char != prev_char:
-            if prev_char:
-                encond += str(count) + prev_char
-            count = 1
-            prev_char = char
-        else:
-            count += 1
-    else:
-        encond += str(count) + prev_char
-        return encond
+#     for char in txt:
+#         if char != prev_char:
+#             if prev_char:
+#                 encond += str(count) + prev_char
+#             count = 1
+#             prev_char = char
+#         else:
+#             count += 1
+#     else:
+#         encond += str(count) + prev_char
+#         return encond
 
-txt_compr = file_encod(my_txt)
+# txt_compr = file_encod(my_txt)
 
-with open('text_code_words.txt', 'w', encoding='UTF-8') as file:
-    file.write(f'{txt_compr}')
-print(txt_compr)
+# with open('text_code_words.txt', 'w', encoding='UTF-8') as file:
+#     file.write(f'{txt_compr}')
+# print(txt_compr)
+
+# Задача 3
+# import random
+
+# txt = "абв"
+# print("Слово которое нужно удалить из текста: ", txt)
+# num_word = (int(input("Количество слов в тексте: ")))
+# list_word = []
+# print("Рандомный текст: ")
+# for x in range(num_word):
+#     random_txt = random.sample(txt, 3)
+#     list_word.append("".join(random_txt))
+
+# print(" ".join(list_word))
+
+# print("Текст без абв: ")
+# list_word2 = list(filter(lambda x: txt not in x, list_word))
+# print(" ".join(list_word2))
